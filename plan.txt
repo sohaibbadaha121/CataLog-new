@@ -1,0 +1,10 @@
+1.planing (9:30-10:00). 
+2.Creat the main interface (Html , css) in a initial version (10:00-10:30).
+3.Read about how to fetch the imges using JavaScript.(10:30-11:00).
+4.Display the imges on the main interface(11:00-12:00).
+5.add a "favorite botton and store favorite imges in local storage (1:00-2:00).
+6.Creat the favorite page (Html ,Css).(2:00-2:30)
+7.get favorites imges from local storage and Display them in favorites page(2:30-3:00).
+8.make the website responsive (using meadia queries)(3:00-4:00).
+9.Read About how to make the website faster and improve its Performance(4:00-5:00).
+
