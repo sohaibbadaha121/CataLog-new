@@ -29,7 +29,7 @@ nav a {
   display: flex;
   justify-content: center;
   gap: 0.8rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .pagination button {
   padding: 0.3rem 0.5rem;
@@ -39,15 +39,32 @@ nav a {
   color: #ffffff;
   cursor: pointer;
 }
-.cat-card {
-  background-color: #ffffff;
+.catimg {
+  background-color: #f8f9fa;
   border-radius: 0.3rem;
   overflow: hidden;
   text-align: center;
+  gap: 0;
 }
-.cat-card img {
+.catimg img {
   width: 100%;
   height: 20rem;
   object-fit: cover;
-  border-radius: 0.4rem;
+  border-radius: 1.5rem;
+}
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+@media (max-width: 1024px) {
+  #cats {
+    grid-template-columns: repeat(2, 27rem);
+  }
+}
+
+@media (max-width: 768px) {
+  #cats {
+    grid-template-columns: repeat(1, 27rem);
+  }
 }
