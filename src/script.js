@@ -14,10 +14,10 @@ async function fetchcats() {
     );
 
     const cats = await req.json();
+    console.log(cats);
     catlist = [...cats];
     updatefavorit();
   } catch (error) {
-    console.error(error);
     catscontainer.innerHTML("error");
   }
 }
