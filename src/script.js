@@ -18,7 +18,7 @@ async function fetchcats() {
     catlist = [...cats];
     updatefavorit();
   } catch (error) {
-    catscontainer.innerHTML("error");
+    catscontainer.innerHTML("error ");
   }
 }
 
