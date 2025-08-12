@@ -5,16 +5,34 @@ body {
 }
 
 #head {
+  display: flex;
+  justify-content: space-between;
   padding: 1rem;
   text-align: center;
+}
+#title {
+  color: #2c3e50;
+}
+#head img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-left: 0.3rem;
+}
+nav {
+  margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 nav a {
   text-decoration: none;
-  color: #ff9800;
-  margin: 0 3rem;
+  color: #d4a373;
   font-weight: bold;
   font-size: large;
+  padding: 0.2rem;
+  margin-right: 1rem;
+  text-align: center;
 }
 
 #cats {
@@ -27,21 +45,21 @@ nav a {
 
 .pagination {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   gap: 0.8rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
 }
 .pagination button {
   padding: 0.3rem 0.5rem;
-  border: 0.1rem solid #ff9800;
+  border: 0.1rem solid #d4a373;
   border-radius: 0.7rem;
-  background-color: #ff9800;
-  color: #ffffff;
+  background-color: #d4a373;
+  color: #2c3e50;
   cursor: pointer;
 }
 .catimg {
   background-color: #f8f9fa;
-  border-radius: 0.3rem;
   overflow: hidden;
   text-align: center;
   gap: 0;

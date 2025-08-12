@@ -3,6 +3,7 @@ const prevbtn = document.getElementById("prev-btn");
 const nextbtn = document.getElementById("next-btn");
 let skip = 0;
 const limit = 8;
+let catlist = [];
 
 fetchcats();
 async function fetchcats() {
@@ -11,22 +12,29 @@ async function fetchcats() {
     const req = await fetch(
       `https://cataas.com/api/cats?skip=${skip}&limit=${limit}`
     );
+
     const cats = await req.json();
-    catscontainer.innerHTML = "";
-    cats.forEach((cat) => {
-      const card = document.createElement("div");
-      card.classList.add("catimg");
-      card.innerHTML = `
+    catlist = [...cats];
+    updatefavorit();
+  } catch (error) {
+    console.error(error);
+    catscontainer.innerHTML("error");
+  }
+}
+
+function updatefavorit() {
+  catscontainer.innerHTML = "";
+  catlist.forEach((cat) => {
+    const card = document.createElement("div");
+    card.classList.add("catimg");
+    card.innerHTML = `
         <img src="https://cataas.com/cat/${cat.id}" alt="cat">
         <button class="fav-btn" onclick="addfavorites('${cat.id}')">
          ${isfavorite(cat.id) ? "❤️" : "🤍"}
          </button>
         `;
-      catscontainer.appendChild(card);
-    });
-  } catch (error) {
-    catscontainer.innerHTML("error");
-  }
+    catscontainer.appendChild(card);
+  });
 }
 
 nextbtn.addEventListener("click", () => {
@@ -51,7 +59,7 @@ function addfavorites(catId) {
   }
 
   localStorage.setItem("favorites", JSON.stringify(favorites));
-  fetchcats();
+  updatefavorit();
 }
 
 function isfavorite(catId) {

@@ -11,14 +11,14 @@ if (favorites.length === 0) {
 
     card.innerHTML = `
       <img src="https://cataas.com/cat/${catId}" alt="Cat">
-      <button class="favorite-btn" onclick="removeFavorite('${catId}')">Delete</button>
+      <button class="favorite-btn" onclick="removefavorite('${catId}')">Delete</button>
     `;
 
     favoritescats.appendChild(card);
   });
 }
 
-function removeFavorite(catId) {
+function removefavorite(catId) {
   favorites = favorites.filter((id) => id !== catId);
   localStorage.setItem("favorites", JSON.stringify(favorites));
   location.reload();
