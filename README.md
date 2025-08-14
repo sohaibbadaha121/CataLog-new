@@ -19,3 +19,9 @@ A simple web application for browsing, paginating, and managing your favorite ca
 
 ## Demo
 [Watch the demo on Youtube](https://youtu.be/soM1DdnSmAM).
+
+
+## 🚀 How to Run
+1. Clone or download the repository.
+2. Open `index.html` in your browser to view the main gallery.
+3. Navigate to `favorites.html` to view your saved favorite cats.
