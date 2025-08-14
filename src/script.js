@@ -18,7 +18,7 @@ async function fetchcats() {
     catlist = [...cats];
     updatefavorit();
   } catch (error) {
-    catscontainer.innerHTML("error ");
+    catscontainer.innerHTML("error");
   }
 }
 
@@ -50,19 +50,37 @@ prevbtn.addEventListener("click", () => {
 });
 
 function addfavorites(catId) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  let favorites;
+  try {
+    favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  } catch (error) {
+    console.log("error");
+    const geterror = document.createElement("p");
+    geterror.innerHTML = "there is a problem getting imges form local storage";
+  }
 
   if (favorites.includes(catId)) {
     favorites = favorites.filter((id) => id !== catId);
   } else {
     favorites.push(catId);
   }
-
-  localStorage.setItem("favorites", JSON.stringify(favorites));
+  try {
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  } catch (error) {
+    console.log("error in setting imges");
+  }
   updatefavorit();
 }
 
 function isfavorite(catId) {
-  let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  let favorites;
+  try {
+    favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+  } catch (error) {
+    console.log("error");
+    const geterror = document.createElement("p");
+    geterror.innerHTML = "there is a problem getting imges form local storage";
+  }
+
   return favorites.includes(catId);
 }
