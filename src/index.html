@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>CataLog</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="head">
+      <img src="/imgs/cat-logo.webp" alt="cat-logo" />
+      <h1 id="title">CataLog</h1>
+      <nav class="nav">
+        <a href="/src/index.html">Home </a>
+        <a href="/src/favorites.html">Favorites</a>
+      </nav>
+    </div>
+
+    <div id="cats"></div>
+    <div class="pagination">
+      <button id="prev-btn">
+        <i class="fa-solid fa-backward"></i> Previous
+      </button>
+      <button id="next-btn">Next <i class="fa-solid fa-forward"></i></button>
+    </div>
+
+    <script src="/src/script.js"></script>
+  </body>
+</html>
