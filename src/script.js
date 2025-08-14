@@ -1,8 +1,9 @@
 const catscontainer = document.getElementById("cats");
 const prevbtn = document.getElementById("prev-btn");
 const nextbtn = document.getElementById("next-btn");
-let skip = 0;
-const limit = 8;
+const params = new URLSearchParams(window.location.search);
+let skip = parseInt(params.get("skip")) || 0;
+const limit = parseInt(params.get("limit")) || 10;
 let catlist = [];
 
 fetchcats();
